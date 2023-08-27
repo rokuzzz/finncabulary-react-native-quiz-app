@@ -1,18 +1,12 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 const WelcomeScreen = () => {
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
-        colors={['#26c6da', '#003366']}
+        colors={['#add8e6', '#000080']}
         style={styles.container}
         start={{ x: 0, y: 0 }}
         end={{ x: 0, y: 1 }}
@@ -40,7 +34,7 @@ const WelcomeScreen = () => {
 
 const CustomButton = ({ title, onPress }) => (
   <TouchableOpacity onPress={onPress}>
-    <View style={[styles.button, { backgroundColor: '#26c6da' }]}>
+    <View style={[styles.button, { backgroundColor: '#add8e6' }]}>
       <Text style={styles.buttonText}>{title}</Text>
     </View>
   </TouchableOpacity>
@@ -66,7 +60,7 @@ const styles = StyleSheet.create({
   slogan: {
     fontSize: 20,
     textTransform: 'capitalize',
-    color: '#a8dbe5',
+    color: 'white',
   },
   buttonContainer: {
     flex: 1,
@@ -76,13 +70,14 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     borderWidth: 2,
-    borderColor: 'white',
+    borderColor: '#add8e6',
     marginVertical: 5,
     width: 150,
     alignItems: 'center',
+    backgroundColor: 'white',
   },
   buttonText: {
-    color: 'white',
+    color: '#000080',
     fontWeight: 'bold',
   },
 });
