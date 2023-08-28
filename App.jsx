@@ -13,19 +13,16 @@ const Stack = createStackNavigator()
 export default function App() {
   return (
     <NavigationContainer> 
-      <Stack.Navigator initialRouteName='WelcomeScreen'>
-        <Stack.Screen 
-          name='WelcomeScreen' 
-          component={WelcomeScreen} 
-          options={{ headerShown: false }} />
-        <Stack.Screen 
-          name='Login' 
-          component={Login} 
-          options={{ headerShown: false }} />
-        <Stack.Screen 
-          name='Register' 
-          component={Register}
-          options={{ headerShown: false }} />
+      <Stack.Navigator 
+        initialRouteName='WelcomeScreen' 
+        screenOptions={{ 
+          cardStyle: {backgroundColor: '#F9FBFC'},
+          headerShown: false
+        }} 
+      >
+        <Stack.Screen name='WelcomeScreen' component={WelcomeScreen} />
+        <Stack.Screen name='Login' component={Login} />
+        <Stack.Screen name='Register' component={Register} />
       </Stack.Navigator>
     </NavigationContainer>
   );
