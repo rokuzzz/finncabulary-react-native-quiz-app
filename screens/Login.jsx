@@ -37,8 +37,13 @@ const Login = ({navigation}) => {
         />
 
         <View style={{marginTop: 40, width: '100%'}}>
-          <CustomButton text='Login' onPress={onLoginPressed} />
+          <CustomButton text='Login' onPress={onLoginPressed} type='PRIMARY' />
         </View>
+        <CustomButton 
+          text="Don't have an account? Register" 
+          onPress={() => navigation.navigate('Register')} 
+          type='SECONDARY' 
+        />
       </View>
     </SafeAreaView>
   );

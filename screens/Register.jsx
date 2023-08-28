@@ -48,8 +48,13 @@ const Register = ({navigation}) => {
         />
 
         <View style={{marginTop: 40, width: '100%'}}>
-          <CustomButton text='Register' onPress={onRegisterPressed} />
+          <CustomButton text='Register' onPress={onRegisterPressed} type='PRIMARY' />
         </View>
+        <CustomButton 
+          text="Already have an account? Login" 
+          onPress={() => navigation.navigate('Login')} 
+          type='SECONDARY' 
+        />
       </View>
     </SafeAreaView>
   );
